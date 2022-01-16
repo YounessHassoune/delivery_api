@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only src/server.ts",
     "build": "tsc && tsc-alias",
-    "start": "node build/server.js",
+    "start": "pm2-runtime start ecosystem.config.js --env production",
     "ci": "yarn install --frozen-lockfile",
     "test": "jest"
   },
