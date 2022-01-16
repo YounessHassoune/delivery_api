@@ -1,0 +1,13 @@
+setup:
+  addons:
+    - plan: heroku-redis
+      as: REDIS
+  config:
+    APP_NAME: heroku-dockerize
+build:
+  docker:
+    web: Dockerfile
+  config:
+    NODE_ENV: production
+run:
+  web: yarn start
