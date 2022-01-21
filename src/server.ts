@@ -11,6 +11,7 @@ import { setBonusEveryMonth } from "@utils/calculate";
 import { Jobs } from "@lib/jobs";
 import morgan from "morgan";
 import { loggerGetId, logger, loggerGetRole } from "@middlewares/logger";
+import { Request, Response } from "express";
 
 const job = new Jobs();
 const app = express();
@@ -37,6 +38,9 @@ app.use("/api/admin", admin);
 app.use("/api/deliverymanager", deliverymanager);
 app.use("/api/manager", manager);
 app.use("/api/driver", driver);
+app.use('/', (req: Request, res: Response) => {
+  res.json('welcome to Marocship Api 🚀🚀🚀')
+})
 
 app.get("/error", () => {
   throw new Error("test error 🙃🙃");
