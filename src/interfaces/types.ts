@@ -1,6 +1,19 @@
 import { Request } from "express";
-import { ValidationChain } from "express-validator";
+import { Content } from "mailgen";
 
 export interface ICurrentUser extends Request {
-  currentUser: object; // or any other type
+  user?: object
+}
+
+export interface CustomContent extends Content {
+  type: string
+  data: object
+}
+
+
+export interface IMorgantoken extends Request {
+  user: {
+    id: string
+    role: string
+  }
 }

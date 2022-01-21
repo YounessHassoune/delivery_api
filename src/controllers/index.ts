@@ -1,4 +1,4 @@
-export { login } from "./admin";
-export {} from "./deliverymanager";
-export {} from "./manager";
-export {} from "./driver";
+export { login as adminLogin } from "./admin";
+export { login as deliveryManagerLogin, create as createDelivery } from "./deliverymanager";
+export { } from "./manager";
+export { login as driverLogin } from "./driver";

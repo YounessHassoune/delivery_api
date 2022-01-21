@@ -1,4 +1,4 @@
-import express from 'express';
+import { ErrorRequestHandler, RequestHandler } from 'express';
 import { Handlers, init, Integrations } from "@sentry/node";
 import { Integrations as TracingIntegrations } from "@sentry/tracing";
 
@@ -9,7 +9,7 @@ export const sentery = {
       new TracingIntegrations.Express({ app }),
     ]
   }),
-  requestHandler: Handlers.requestHandler() as express.RequestHandler,
-  errorHandler: Handlers.errorHandler() as express.ErrorRequestHandler,
+  requestHandler: Handlers.requestHandler() as RequestHandler,
+  errorHandler: Handlers.errorHandler() as ErrorRequestHandler,
   tracingHandler: Handlers.tracingHandler(),
 }

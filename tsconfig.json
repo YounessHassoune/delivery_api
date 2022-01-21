@@ -4,66 +4,29 @@
     "target": "ESNext",
     "module": "CommonJS",
     "outDir": "build",
-    "skipDefaultLibCheck": true,
     "strict": true,
-    "lib": [
-      "esnext"
-    ],
+    "lib": ["esnext"],
     "esModuleInterop": true,
     "moduleResolution": "Node",
     "incremental": true,
     "baseUrl": "src",
     "paths": {
-      "@lib/*": [
-        "lib/*"
-      ],
-      "@utils/*": [
-        "utils/*"
-      ],
-      "@types/*": [
-        "types/*"
-      ],
-      "@routes/*": [
-        "routes/*"
-      ],
-      "@services/*": [
-        "services/*"
-      ],
-      "@models/*": [
-        "models/*"
-      ],
-      "@controllers/*": [
-        "controllers/*"
-      ],
-      "@middlewares/*": [
-        "middlewares/*"
-      ],
-      "@interfaces/*": [
-        "interfaces/*"
-      ],
-      "@enums/*": [
-        "enums/*"
-      ],
-      "@errors/*": [
-        "errors/*"
-      ],
-      "@helpers/*": [
-        "helpers/*"
-      ],
-      "@plugins/*": [
-        "plugins/*"
-      ],
-      "@config/*": [
-        "config/*"
-      ]
+      "@lib/*": ["lib/*"],
+      "@utils/*": ["utils/*"],
+      "@types/*": ["types/*"],
+      "@routes/*": ["routes/*"],
+      "@services/*": ["services/*"],
+      "@models/*": ["models/*"],
+      "@controllers/*": ["controllers/*"],
+      "@middlewares/*": ["middlewares/*"],
+      "@interfaces/*": ["interfaces/*"],
+      "@enums/*": ["enums/*"],
+      "@errors/*": ["errors/*"],
+      "@helpers/*": ["helpers/*"],
+      "@plugins/*": ["plugins/*"],
+      "@config/*": ["config/*"]
     }
   },
-  "exclude": [
-    "build",
-    "tests",
-    "node_modules"
-  ],
-  "include": [
-    "src/**/*.ts"
-  ]
+  "exclude": ["build", "tests", "node_modules"],
+  "include": ["src/**/*.ts"]
 }

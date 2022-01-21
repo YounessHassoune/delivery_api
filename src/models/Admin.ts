@@ -21,4 +21,8 @@ const schema = new Schema<IAdmin>(
   { timestamps: true }
 );
 
+schema.methods.generateHash = (password: string) => {
+  return password;
+}
+
 export const Admin = model<IAdmin>("Admin", schema);

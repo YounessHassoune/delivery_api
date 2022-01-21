@@ -18,5 +18,8 @@ const schema = new mongoose_1.Schema({
         required: true,
     },
 }, { timestamps: true });
+schema.methods.generateHash = (password) => {
+    return password;
+};
 exports.Admin = (0, mongoose_1.model)("Admin", schema);
 //# sourceMappingURL=Admin.js.map

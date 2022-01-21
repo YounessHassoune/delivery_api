@@ -2,7 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.auth = void 0;
 const index_1 = require("../utils/index");
-const auth = (role = "") => async (req, res, next) => {
+// =========== auth middleware ============
+const auth = (role = null) => async (req, res, next) => {
     const bearer = req?.headers?.authorization;
     if (!bearer) {
         return res.status(401).json({ error: "unauthorized" });
@@ -12,7 +13,8 @@ const auth = (role = "") => async (req, res, next) => {
     if (!payload) {
         return res.status(401).json({ error: "unauthenticated" });
     }
-    req.currentUser = { ...payload };
+    // pass the current user data to the next middleware
+    req.user = { ...payload };
     next();
 };
 exports.auth = auth;
