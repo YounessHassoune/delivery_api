@@ -106,5 +106,4 @@ Yarn scripts basically allow us to call (and chain) terminal commands via yarn.
 
 ## Authors
 
-- [@Youssef Hajjari](https://twitter.com/Yosufuu)
 - [@Youness Hassoune](https://twitter.com/YounessHassoune)
